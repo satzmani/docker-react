@@ -10,4 +10,4 @@ services:
      script:
         - docker run -e CI=true satzmani/docker-react npm run test
 
-        language: generic
+    
