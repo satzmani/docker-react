@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+    - docker
+
+    before_install:
+     - docker build  -t satzmani/docker-react -f Dockerfile.dev .  
+
+
+     script:
+        - docker run -e CI=true satzmani/docker-react npm run test
+
+        language: generic
